@@ -3,3 +3,13 @@
   border-radius: 5px;
   padding: 20px;
 }
+
+.portfolio-item {
+  width: 500px !important;
+  height: 500px;
+}
+
+/* .portfolio-item img {
+  height: 500px;
+  object-fit: contain;
+} */
