@@ -1,42 +1,86 @@
 {
-  "main": {
-    "name": "Agustin Di Nardo",
-    "occupation": "Full-Stack Developer",
-    "image": "profilepic.jpg",
-    "bio": "I'm a Full Stack developer studying computer science with some Data Analytics experience and I'm great for learning new stuff and adapting myself to new worlds. I've been finishing my work in 66% less time than I've been asked for, so I'm ready for new challenges with some extra pressure.",
-    "email": "agusdinar96@gmail.com",
-    "address": {
-      "city": "Buenos Aires",
-      "state": "Argentina"
+  "en": {
+    "main": {
+      "name": "Agustin Di Nardo",
+      "occupation": "Full-Stack Developer",
+      "image": "profilepic.jpg",
+      "bio": "I'm a Full Stack developer studying computer science with some Data Analytics experience and I'm great for learning new stuff and adapting myself to new worlds. I've been finishing my work in 66% less time than I've been asked for, so I'm ready for new challenges with some extra pressure.",
+      "email": "agusdinar96@gmail.com",
+      "address": {
+        "city": "Buenos Aires",
+        "state": "Argentina"
+      },
+      "resumedownload": "Agustin Di Nardo CV - EN.pdf",
+      "social": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/in/agustin-di-nardo",
+          "className": "fa fa-linkedin"
+        },
+        {
+          "name": "github",
+          "url": "https://github.com/Lapsa09",
+          "className": "fa fa-github"
+        }
+      ]
     },
-    "resumedownload": "Agustin Di Nardo CV - EN.pdf",
-    "social": [
-      {
-        "name": "linkedin",
-        "url": "https://www.linkedin.com/in/agustin-di-nardo-4085b6121/",
-        "className": "fa fa-linkedin"
-      },
-      {
-        "name": "github",
-        "url": "https://github.com/Lapsa09",
-        "className": "fa fa-github"
-      }
-    ]
+    "portfolio": {
+      "projects": [
+        {
+          "title": "Traffic OPs APP",
+          "category": "",
+          "image": "previewimg.png",
+          "url": "https://github.com/Lapsa09/transito"
+        },
+        {
+          "title": "LinkedIn Clone (React JS)",
+          "category": "",
+          "image": "linkedin.jpg",
+          "url": "https://github.com/Lapsa09/linkedin-clone"
+        }
+      ]
+    }
   },
-  "portfolio": {
-    "projects": [
-      {
-        "title": "Traffic OPs APP",
-        "category": "",
-        "image": "previewimg.png",
-        "url": "https://github.com/Lapsa09/transito"
+  "es": {
+    "main": {
+      "name": "Agustin Di Nardo",
+      "occupation": "Desarrollador Full-Stack",
+      "image": "profilepic.jpg",
+      "bio": "Soy un Desarrollador Full-Stack estudiando Programacion Informatica con algo de experiencia en Analisis de Datos y soy muy bueno para aprender nuevas cosas y adaptarme a nuevos mundos. En mi trabajo actual termino mis tareas en un 66% menos del tiempo requerido, asi que estoy listo para nuevos retos de mayor intensidad.",
+      "email": "agusdinar96@gmail.com",
+      "address": {
+        "city": "Buenos Aires",
+        "state": "Argentina"
       },
-      {
-        "title": "LinkedIn Clone (React JS)",
-        "category": "",
-        "image": "linkedin.jpg",
-        "url": "https://github.com/Lapsa09/linkedin-clone"
-      }
-    ]
+      "resumedownload": "Agustin Di Nardo CV - ES.pdf",
+      "social": [
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/in/agustin-di-nardo",
+          "className": "fa fa-linkedin"
+        },
+        {
+          "name": "github",
+          "url": "https://github.com/Lapsa09",
+          "className": "fa fa-github"
+        }
+      ]
+    },
+    "portfolio": {
+      "projects": [
+        {
+          "title": "Aplicacion de registro de operativos de transito",
+          "category": "",
+          "image": "previewimg.png",
+          "url": "https://github.com/Lapsa09/transito"
+        },
+        {
+          "title": "Clon de LinkedIn (React JS)",
+          "category": "",
+          "image": "linkedin.jpg",
+          "url": "https://github.com/Lapsa09/linkedin-clone"
+        }
+      ]
+    }
   }
 }

@@ -9,6 +9,26 @@
   height: 500px;
 }
 
+.lng {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0 !important;
+}
+.lng > li {
+  cursor: pointer;
+}
+
+.lng > li > img {
+  max-width: 50px;
+}
+
+@media (max-width: 560px) {
+  .portfolio-item {
+    width: auto !important;
+  }
+}
+
 /* .portfolio-item img {
   height: 500px;
   object-fit: contain;

@@ -1,11 +1,14 @@
-import React from "react";
+import i18next from "i18next";
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import TypeWriter from "react-typewriter";
+import "../App.css";
 
-const Header = ({ data }) => {
+const Header = ({ data, lng }) => {
+  const { t } = useTranslation("home");
   if (data) {
     var name = data.name;
     var occupation = data.occupation;
-    var description = data.description;
     var city = data.address.city;
     var networks = data.social.map(function (network) {
       return (
@@ -17,6 +20,16 @@ const Header = ({ data }) => {
       );
     });
   }
+  useEffect(() => {
+    if (localStorage.getItem("i18nextLng")?.length > 2) {
+      i18next.changeLanguage("es");
+    }
+  }, []);
+
+  const handleLanguageChange = (_lng) => {
+    i18next.changeLanguage(_lng);
+    lng(_lng);
+  };
 
   return (
     <header id="home">
@@ -29,19 +42,27 @@ const Header = ({ data }) => {
         </a>
 
         <ul id="nav" className="nav">
+          <ul className="lng">
+            <li onClick={() => handleLanguageChange("es")}>
+              <img src="/assets/img/flag_of_spain.svg" />
+            </li>
+            <li onClick={() => handleLanguageChange("en")}>
+              <img src="/assets/img/British_Flag_clip_art.svg" />
+            </li>
+          </ul>
           <li className="current">
             <a className="smoothscroll" href="#home">
-              Home
+              {t("home")}
             </a>
           </li>
           <li>
             <a className="smoothscroll" href="#about">
-              About
+              {t("about")}
             </a>
           </li>
           <li>
             <a className="smoothscroll" href="#portfolio">
-              Portfolio
+              {t("portfolio")}
             </a>
           </li>
         </ul>
@@ -50,10 +71,12 @@ const Header = ({ data }) => {
       <div className="row banner">
         <div className="banner-text">
           <h1 className="responsive-headline">
-            <TypeWriter typing={0.5}>{name ? `I'm ${name}.` : null}</TypeWriter>
+            <TypeWriter typing={0.5}>
+              {name ? `${t("im")} ${name}.` : null}
+            </TypeWriter>
           </h1>
           <h3>
-            <span>{occupation}</span>. Based in {city}.
+            <span>{occupation}</span>. {`${t("basedIn")} ${city}`}.
           </h3>
           <hr />
           <ul className="social">{networks}</ul>

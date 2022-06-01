@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = ({ data }) => {
+  const { t } = useTranslation(["portfolio"]);
   if (data) {
     var projects = data.projects.map(function (projects) {
       var projectImage = "images/portfolio/" + projects.image;
@@ -29,7 +31,7 @@ const Portfolio = ({ data }) => {
     <section id="portfolio">
       <div className="row">
         <div className="twelve columns collapsed">
-          <h1>Check Out Some of My Works.</h1>
+          <h1>{t("works")}</h1>
 
           <div
             id="portfolio-wrapper"

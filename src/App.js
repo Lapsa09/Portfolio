@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -9,22 +9,23 @@ import "./App.css";
 
 const App = () => {
   const [resumeData, setResumeData] = useState({});
+  const [lng, setLng] = useState("es");
 
   useEffect(() => {
     fetch("/resumeData.json")
       .then((res) => res.json())
       .then((data) => {
-        setResumeData(data);
+        setResumeData(data[lng]);
       });
-  }, []);
+  }, [lng]);
 
   return (
-    <div className="App">
-      <Header data={resumeData.main} />
+    <Suspense fallback={null} className="App">
+      <Header data={resumeData.main} lng={setLng} />
       <About data={resumeData.main} />
       <Portfolio data={resumeData.portfolio} />
       <Footer data={resumeData.main} />
-    </div>
+    </Suspense>
   );
 };
 
